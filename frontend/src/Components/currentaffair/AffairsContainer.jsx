@@ -75,7 +75,7 @@ export function BlogComps({
             <div className="relative">
               <img
                 className="w-full rounded-xl"
-                src={imageSrc}
+                src={`${import.meta.env.VITE_BACKEND_URL_IMAGE}/img/affairs/uchiudan.png`}
                 alt="Blog Cover"
               />
               <p className="absolute top-0 bg-[#ffef39] text-gray-800 font-semibold py-1 px-3 rounded-br-lg rounded-tl-lg">
@@ -87,7 +87,7 @@ export function BlogComps({
             <span>{category}</span>
           </h3>
         </div>
-        <h1 className="mt-4 text-gray-800 text-lg font-bold cursor-pointer overflow-hidden mb-[1rem]">
+        <h1 className="mt-4 text-gray-800 text-lg font-bold cursor-pointer overflow-hidden mb-[1rem] truncate ">
           {title}
         </h1>
         <div className="card__data">
