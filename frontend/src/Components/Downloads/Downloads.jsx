@@ -6,6 +6,7 @@ import { MdOutlineAccessTimeFilled, MdOutlineDelete } from "react-icons/md";
 import { RiMenu3Fill, RiCloseFill } from "react-icons/ri";
 import Sidebar_pdf from "../Sidebar/Sidebar_pdf";
 import { Toaster, toast } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 function BlogComps({
   date,
@@ -216,6 +217,14 @@ function Downloads({ userData }) {
 
   return (
     <div className="mx-auto py-[7rem]">
+    <Helmet>
+    <title>Monthly PDFs / मासिक PDF</title>
+      <meta 
+       name="description"
+       content="Get Latest update Free/पैड PDFs of current Affairs"
+      />
+      <link rel="canonical" href="/pdfs"></link>
+    </Helmet>
       <div className="p-2">
         {isSmallScreen && (
           <button
