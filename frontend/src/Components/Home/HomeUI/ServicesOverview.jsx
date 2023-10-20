@@ -19,7 +19,7 @@ function ServicesOverview() {
       if (response.status === 200) {
         const data = response.data;
         const id = data.id;
-        window.location.href = `${import.meta.env.VITE_BACKEND_URL}/currentaffairs/${id}`;
+        window.location.href = `${import.meta.env.VITE_FRONTEND_URL}/currentaffairs/${id}`;
 
 
       } else {
