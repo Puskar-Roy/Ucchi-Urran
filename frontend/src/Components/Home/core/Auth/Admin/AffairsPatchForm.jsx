@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
 
@@ -9,11 +9,13 @@ const patchAffairs = async (affairsData, id) => {
 
   formData.append("topic", affairsData.topic);
   formData.append("category", affairsData.category);
-  formData.append("description", affairsData.description); // Include the description
+  formData.append("description", affairsData.description);
   formData.append("data", JSON.stringify(affairsData.data));
   formData.append("photo", affairsData.photo);
 
   try {
+    const loadingToast = toast.loading("Updating CurrentAffairs...");
+
     await axios.patch(
       `${import.meta.env.VITE_BACKEND_URL}/currentaffairs/${id}`,
       formData,
@@ -23,6 +25,8 @@ const patchAffairs = async (affairsData, id) => {
         },
       }
     );
+
+    toast.dismiss(loadingToast);
 
     if (!id) {
       toast.success("CurrentAffairs posted successfully!");
@@ -216,13 +220,13 @@ const CurrentAffairsForm = ({ details }) => {
               ],
             })
           }
-          className="bg-blue-500 hover-bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
         >
           Add Question
         </button>
         <button
           type="submit"
-          className="bg-green-500 hover-bg-green-700 text-white font-bold py-2 px-4 rounded mt-4"
+          className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4"
         >
           Submit
         </button>
