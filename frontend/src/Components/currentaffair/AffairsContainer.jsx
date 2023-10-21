@@ -8,7 +8,6 @@ import { Toaster, toast } from "react-hot-toast";
 export function BlogComps({
   date,
   id,
-  imageSrc,
   updatedDate,
   category,
   title,
