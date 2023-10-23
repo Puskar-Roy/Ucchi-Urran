@@ -32,10 +32,13 @@ function BlogComps({
   }
 
   const handleDeleteClick = async (event) => {
+    event.preventDefault();
     event.stopPropagation();
+
     if (window.confirm("Are you sure you want to delete this item?")) {
       const token = localStorage.getItem("jwt_token");
       try {
+        const loadingToast = toast.loading("Deleting PDF...");
         const response = await axios.delete(
           `${import.meta.env.VITE_BACKEND_URL}/pdfs/${id}`,
 
@@ -47,12 +50,15 @@ function BlogComps({
         );
 
         if (response.status === 200) {
+          toast.dismiss(loadingToast);
           toast.success("Item deleted successfully");
         } else {
+          toast.dismiss(loadingToast);
           console.error("Error deleting item:", response);
           toast.error("Error in deleting item");
         }
       } catch (error) {
+        toast.dismiss(loadingToast);
         console.error("Error deleting item:", error);
         toast.error("Error in deleting item");
       }

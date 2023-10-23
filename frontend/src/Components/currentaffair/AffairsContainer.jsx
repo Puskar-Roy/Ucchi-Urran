@@ -32,6 +32,7 @@ export function BlogComps({
       const token = localStorage.getItem("jwt_token");
 
       try {
+        const loadingToast = toast.loading("Deleting CurrentAffairs...");
         const response = await axios.delete(
           `${import.meta.env.VITE_BACKEND_URL}/currentaffairs/${id}`,
           {
@@ -42,13 +43,16 @@ export function BlogComps({
         );
 
         if (response.status === 200) {
+          toast.dismiss(loadingToast);
           toast.success("Item deleted successfully");
           // Reload the page after successful deletion
         } else {
+          toast.dismiss(loadingToast);
           console.error("Error deleting item:", response);
           toast.error("Error in deleting item");
         }
       } catch (error) {
+        toast.dismiss(loadingToast);
         console.error("Error deleting item:", error);
         toast.error("Error in deleting item");
       }
