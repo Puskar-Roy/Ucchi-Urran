@@ -12,8 +12,8 @@ const socialMediaIcons = {
 const users = [
   {
     name: "Ishu Singh",
-    jobTitle: "Job Title 1",
-    description: "Description 1",
+
+    description: "Developer",
     image: "ishu",
     socialMediaLinks: {
       github: "https://github.com/user1",
@@ -25,7 +25,7 @@ const users = [
   {
     name: "Anuraj Kumar",
 
-    description: "Description 2",
+    description: "Developer",
     image: "anuraj",
     socialMediaLinks: {
       github: "https://github.com/user2",
@@ -36,8 +36,8 @@ const users = [
   },
   {
     name: "Kingshuk Mondal",
-    jobTitle: "Developer",
-    description: "Description 2",
+
+    description: "Developer",
     image: "kingshuk",
     socialMediaLinks: {
       github: "https://github.com/ImKKingshuk",
@@ -49,7 +49,7 @@ const users = [
   {
     name: "Puskar Roy",
 
-    description: "Description 2",
+    description: "Developer",
     image: "puskar",
     socialMediaLinks: {
       github: "https://github.com/user2",
