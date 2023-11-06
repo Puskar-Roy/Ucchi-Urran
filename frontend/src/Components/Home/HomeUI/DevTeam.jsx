@@ -24,7 +24,7 @@ const users = [
   },
   {
     name: "Anuraj Kumar",
-    jobTitle: "Job Title 2",
+
     description: "Description 2",
     image: "anuraj",
     socialMediaLinks: {
@@ -36,7 +36,7 @@ const users = [
   },
   {
     name: "Kingshuk Mondal",
-    jobTitle: "Job Title 2",
+    jobTitle: "Developer",
     description: "Description 2",
     image: "kingshuk",
     socialMediaLinks: {
@@ -48,7 +48,7 @@ const users = [
   },
   {
     name: "Puskar Roy",
-    jobTitle: "Job Title 2",
+
     description: "Description 2",
     image: "puskar",
     socialMediaLinks: {
@@ -87,10 +87,8 @@ function DevTeam() {
                 <h1 className="font-bold text-3xl text-center mb-1">
                   {user.name}
                 </h1>
-                <p className="text-gray-800 text-sm text-center">
-                  {user.jobTitle}
-                </p>
-                <p className="text-center text-gray-600 text-base pt-3 font-normal">
+
+                <p className="text-center text-gray-600 text-base pt-2 font-normal">
                   {user.description}
                 </p>
                 <div className="w-full flex justify-center pt-5 pb-5">
