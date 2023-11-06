@@ -64,7 +64,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/news"
                   className="text-gray-700 transition hover:text-gray-700/75"
                 >
                   News
