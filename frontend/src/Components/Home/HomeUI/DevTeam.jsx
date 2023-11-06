@@ -24,6 +24,7 @@ const users = [
     name: "User 2",
     jobTitle: "Job Title 2",
     description: "Description 2",
+    image: "",
     socialMediaLinks: {
       github: "https://github.com/user2",
       twitter: "https://twitter.com/user2",
@@ -48,7 +49,7 @@ function DevTeam() {
             <div className="absolute -mt-20 w-full flex justify-center">
               <div className="h-32 w-32">
                 <img
-                  src={user.image}
+                  src={`/Dev/${user.image}.png`}
                   alt={`Display Picture of ${user.name}`}
                   className="rounded-full object-cover h-full w-full shadow-md"
                 />
