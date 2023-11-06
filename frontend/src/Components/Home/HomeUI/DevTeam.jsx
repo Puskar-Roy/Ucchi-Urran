@@ -11,7 +11,7 @@ const socialMediaIcons = {
 
 const users = [
   {
-    name: "User 1",
+    name: "Ishu Singh",
     jobTitle: "Job Title 1",
     description: "Description 1",
     socialMediaLinks: {
@@ -21,7 +21,29 @@ const users = [
     },
   },
   {
-    name: "User 2",
+    name: "Anuraj Kumar",
+    jobTitle: "Job Title 2",
+    description: "Description 2",
+    image: "",
+    socialMediaLinks: {
+      github: "https://github.com/user2",
+      twitter: "https://twitter.com/user2",
+      instagram: "https://www.instagram.com/user2/",
+    },
+  },
+  {
+    name: "Kingshuk Mondal",
+    jobTitle: "Job Title 2",
+    description: "Description 2",
+    image: "",
+    socialMediaLinks: {
+      github: "https://github.com/user2",
+      twitter: "https://twitter.com/user2",
+      instagram: "https://www.instagram.com/user2/",
+    },
+  },
+  {
+    name: "Puskar Roy",
     jobTitle: "Job Title 2",
     description: "Description 2",
     image: "",
@@ -49,7 +71,7 @@ function DevTeam() {
             <div className="absolute -mt-20 w-full flex justify-center">
               <div className="h-32 w-32">
                 <img
-                  src={`/Dev/${user.image}.png`}
+                  src={`/Devs/${user.image}.png`}
                   alt={`Display Picture of ${user.name}`}
                   className="rounded-full object-cover h-full w-full shadow-md"
                 />
