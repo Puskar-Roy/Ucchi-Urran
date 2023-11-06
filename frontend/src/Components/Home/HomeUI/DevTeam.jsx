@@ -53,6 +53,7 @@ const users = [
     image: "puskar",
     socialMediaLinks: {
       github: "https://github.com/user2",
+      linkedin: "https://github.com/user2",
       twitter: "https://twitter.com/user2",
       instagram: "https://www.instagram.com/user2/",
     },
