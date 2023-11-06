@@ -148,7 +148,7 @@ function Footer() {
                   to="/pdfs"
                   className="text-gray-700 transition hover:text-gray-700/75"
                 >
-                  PDFs
+                  Website Creating Team
                 </Link>
               </li>
             </ul>
