@@ -1,12 +1,13 @@
 import React from "react";
 import HighlightText from "../core/Homepage/HighlightText";
 
-import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 const socialMediaIcons = {
   github: FaGithub,
   twitter: FaTwitter,
   instagram: FaInstagram,
+  linkedin: FaLinkedin,
 };
 
 const users = [
@@ -101,7 +102,7 @@ function DevTeam() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        <div aria-label={media} role="img">
+                        <div className="text-[1.5rem]">
                           {React.createElement(socialMediaIcons[media])}
                         </div>
                       </a>
