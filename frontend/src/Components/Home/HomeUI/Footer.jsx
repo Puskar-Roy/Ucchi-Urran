@@ -145,7 +145,7 @@ function Footer() {
               </li>
               <li>
                 <Link
-                  to="/pdfs"
+                  to="/DevTeam"
                   className="text-gray-700 transition hover:text-gray-700/75"
                 >
                   Website Creating Team
