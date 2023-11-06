@@ -17,6 +17,7 @@ const users = [
     image: "ishu",
     socialMediaLinks: {
       github: "https://github.com/user1",
+      linkedin: "https://github.com/user2",
       twitter: "https://twitter.com/user1",
       instagram: "https://www.instagram.com/user1/",
     },
@@ -28,6 +29,7 @@ const users = [
     image: "anuraj",
     socialMediaLinks: {
       github: "https://github.com/user2",
+      linkedin: "https://github.com/user2",
       twitter: "https://twitter.com/user2",
       instagram: "https://www.instagram.com/user2/",
     },
@@ -38,9 +40,10 @@ const users = [
     description: "Description 2",
     image: "kingshuk",
     socialMediaLinks: {
-      github: "https://github.com/user2",
-      twitter: "https://twitter.com/user2",
-      instagram: "https://www.instagram.com/user2/",
+      github: "https://github.com/ImKKingshuk",
+      linkedin: "https://linkedin.com/in/ImKKingshuk",
+      twitter: "https://twitter.com/ImKKingshuk",
+      instagram: "https://www.instagram.com/ImKKingshuk",
     },
   },
   {
