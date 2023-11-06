@@ -164,11 +164,10 @@ function Footer() {
         <p>
           Designed & Developed by {""}
           <li>
-            <Link to="" className="text-blue-500">
+            <Link to="/DevTeam" className="text-blue-500">
               Meow Coders
             </Link>
           </li>
-          <a href="/DevTeam">Meow Coders</a>.
         </p>
       </div>
     </div>
