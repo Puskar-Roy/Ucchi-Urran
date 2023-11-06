@@ -55,39 +55,36 @@ function Footer() {
 
             <ul className="mt-6 space-y-1">
               <li>
-                <a
+                <Link
+                  to="/"
                   className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/"
                 >
                   Home
-                </a>
+                </Link>
               </li>
-
               <li>
-                <a
+                <Link
+                  to="/"
                   className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/pdfs"
                 >
-                  Pdfs
-                </a>
+                  News
+                </Link>
               </li>
-
               <li>
-                <a
+                <Link
+                  to="/currentaffairs"
                   className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/News"
-                >
-                  News/Blogs
-                </a>
-              </li>
-
-              <li>
-                <a
-                  className="text-gray-700 transition hover:text-gray-700/75"
-                  href="/Currentaffairs"
                 >
                   Current Affairs
-                </a>
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/pdfs"
+                  className="text-gray-700 transition hover:text-gray-700/75"
+                >
+                  PDFs
+                </Link>
               </li>
             </ul>
           </div>
