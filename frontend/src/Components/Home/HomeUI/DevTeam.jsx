@@ -1,6 +1,6 @@
 import React from "react";
 import HighlightText from "../core/Homepage/HighlightText";
-import React from "react";
+
 import { FaGithub, FaTwitter, FaInstagram } from "react-icons/fa";
 
 const socialMediaIcons = {
@@ -14,6 +14,7 @@ const users = [
     name: "Ishu Singh",
     jobTitle: "Job Title 1",
     description: "Description 1",
+    image: "ishu",
     socialMediaLinks: {
       github: "https://github.com/user1",
       twitter: "https://twitter.com/user1",
@@ -24,7 +25,7 @@ const users = [
     name: "Anuraj Kumar",
     jobTitle: "Job Title 2",
     description: "Description 2",
-    image: "",
+    image: "anuraj",
     socialMediaLinks: {
       github: "https://github.com/user2",
       twitter: "https://twitter.com/user2",
@@ -35,7 +36,7 @@ const users = [
     name: "Kingshuk Mondal",
     jobTitle: "Job Title 2",
     description: "Description 2",
-    image: "",
+    image: "kingshuk",
     socialMediaLinks: {
       github: "https://github.com/user2",
       twitter: "https://twitter.com/user2",
@@ -46,7 +47,7 @@ const users = [
     name: "Puskar Roy",
     jobTitle: "Job Title 2",
     description: "Description 2",
-    image: "",
+    image: "puskar",
     socialMediaLinks: {
       github: "https://github.com/user2",
       twitter: "https://twitter.com/user2",
@@ -62,50 +63,54 @@ function DevTeam() {
         Developers of <HighlightText text={"ऊँची उड़ान"} />
       </h1>
 
-      {users.map((user, index) => (
-        <div
-          key={index}
-          className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
-        >
-          <div className="rounded overflow-hidden shadow-md bg-white">
-            <div className="absolute -mt-20 w-full flex justify-center">
-              <div className="h-32 w-32">
-                <img
-                  src={`/Devs/${user.image}.png`}
-                  alt={`Display Picture of ${user.name}`}
-                  className="rounded-full object-cover h-full w-full shadow-md"
-                />
+      <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+        {users.map((user, index) => (
+          <div
+            key={index}
+            className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5"
+          >
+            <div className="rounded overflow-hidden shadow-md bg-white">
+              <div className="absolute -mt-20 w-full flex justify-center">
+                <div className="h-32 w-32">
+                  <img
+                    src={`/Devs/${user.image}.jpeg`}
+                    alt={`Display Picture of ${user.name}`}
+                    className="rounded-full object-cover h-full w-full shadow-md"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="px-6 mt-16">
-              <h1 className="font-bold text-3xl text-center mb-1">
-                {user.name}
-              </h1>
-              <p className="text-gray-800 text-sm text-center">
-                {user.jobTitle}
-              </p>
-              <p className="text-center text-gray-600 text-base pt-3 font-normal">
-                {user.description}
-              </p>
-              <div className="w-full flex justify-center pt-5 pb-5">
-                {Object.entries(user.socialMediaLinks).map(([media, link]) => (
-                  <a
-                    key={media}
-                    href={link}
-                    className="mx-5"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <div aria-label={media} role="img">
-                      {React.createElement(socialMediaIcons[media])}
-                    </div>
-                  </a>
-                ))}
+              <div className="px-6 mt-16">
+                <h1 className="font-bold text-3xl text-center mb-1">
+                  {user.name}
+                </h1>
+                <p className="text-gray-800 text-sm text-center">
+                  {user.jobTitle}
+                </p>
+                <p className="text-center text-gray-600 text-base pt-3 font-normal">
+                  {user.description}
+                </p>
+                <div className="w-full flex justify-center pt-5 pb-5">
+                  {Object.entries(user.socialMediaLinks).map(
+                    ([media, link]) => (
+                      <a
+                        key={media}
+                        href={link}
+                        className="mx-5"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <div aria-label={media} role="img">
+                          {React.createElement(socialMediaIcons[media])}
+                        </div>
+                      </a>
+                    )
+                  )}
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
