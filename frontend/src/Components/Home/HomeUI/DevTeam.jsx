@@ -30,7 +30,6 @@ const users = [
       instagram: "https://www.instagram.com/user2/",
     },
   },
-  // Add more user profiles as needed
 ];
 
 function DevTeam() {
@@ -49,9 +48,8 @@ function DevTeam() {
             <div className="absolute -mt-20 w-full flex justify-center">
               <div className="h-32 w-32">
                 <img
-                  src={user.socialMediaLinks.github}
+                  src={user.image}
                   alt={`Display Picture of ${user.name}`}
-                  role="img"
                   className="rounded-full object-cover h-full w-full shadow-md"
                 />
               </div>
