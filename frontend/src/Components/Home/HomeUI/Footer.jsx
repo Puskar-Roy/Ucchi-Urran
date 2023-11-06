@@ -143,6 +143,14 @@ function Footer() {
                   FAQs
                 </a>
               </li>
+              <li>
+                <Link
+                  to="/pdfs"
+                  className="text-gray-700 transition hover:text-gray-700/75"
+                >
+                  PDFs
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -155,10 +163,12 @@ function Footer() {
         </p>
         <p>
           Designed & Developed by {""}
-          <a href="/DevTeam" className="text-blue-500">
-            Meow Coders
-          </a>
-          .
+          <li>
+            <Link to="" className="text-blue-500">
+              Meow Coders
+            </Link>
+          </li>
+          <a href="/DevTeam">Meow Coders</a>.
         </p>
       </div>
     </div>
