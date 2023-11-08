@@ -229,7 +229,7 @@ function Downloads({ userData }) {
        name="description"
        content="Get Latest update Free/पैड PDFs of current Affairs"
       />
-      <link rel="canonical" href="/pdfs"></link>
+      <link rel="canonical" href="https://unchiudan.in/pdfs"></link>
     </Helmet>
       <div className="p-2">
         {isSmallScreen && (
