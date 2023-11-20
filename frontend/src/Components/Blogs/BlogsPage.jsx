@@ -83,7 +83,11 @@ function BlogsPage({ userData }) {
       [questionIndex]: isCorrect ? "correct" : "incorrect",
     }));
   };
-
+  const decodeHtmlEntities = (html) => {
+    const textarea = document.createElement('textarea');
+    textarea.innerHTML = html;
+    return textarea.value;
+  };
   return (
     <>
       <div className=" py-[8rem] ">
@@ -110,10 +114,11 @@ function BlogsPage({ userData }) {
           </div>
           <SocialMedia />
           <h1 className="mt-10 text-[1.3rem] font-[550] text-center">
-            {affairDetails.topic}
+          <span dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(affairDetails.topic) }} />
+           
           </h1>
           <p className="mt-4 text-justify text-lg">
-          {affairDetails.description}
+          <span dangerouslySetInnerHTML={{ __html: decodeHtmlEntities(affairDetails.description) }} />
           </p>
           <h1 className="mt-10 text-lg font-bold text-center">
             Daily Quiz / डेली प्रश्न
