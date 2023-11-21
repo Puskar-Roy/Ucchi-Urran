@@ -33,9 +33,9 @@ function NewsComp({ newsItems, userData,onNewsDelete  }) {
 
     if (window.confirm("Are you sure you want to delete this item?")) {
       const token = localStorage.getItem("jwt_token");
-
+      const loadingToast = toast.loading("Deleting News..."); // Display loading toast
       try {
-        const loadingToast = toast.loading("Deleting News..."); // Display loading toast
+        
 
         const response = await axios.delete(
           `${import.meta.env.VITE_BACKEND_URL}/news/${newsId}`,

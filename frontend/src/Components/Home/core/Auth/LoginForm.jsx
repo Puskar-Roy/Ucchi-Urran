@@ -9,11 +9,11 @@ import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
 
 const initialValues = { email: "", password: "" };
-
+const loadingToast = toast.loading("Logging in...");
 const login = async (userData) => {
   try {
     // Show a loading toast while logging in
-    const loadingToast = toast.loading("Logging in...");
+    
 
     const response = await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/user/login`,
