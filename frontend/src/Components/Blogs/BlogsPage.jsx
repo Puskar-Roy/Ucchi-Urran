@@ -97,7 +97,7 @@ function BlogsPage({ userData }) {
        name="description"
        content="Get Daily Quiz / डेली प्रश्न of current Affairs.."
       />
-       <link rel="canonical" href="https://unchiudan.in/Currentaffairs"></link>
+       <link rel="canonical" href="https://unchiudaanclasses.com/Currentaffairs"></link>
     </Helmet>
         <div className=" mx-6 ">
           <h1 className="text-center font-bold text-[2rem] md:text-[2.5rem] mb-6 ">
