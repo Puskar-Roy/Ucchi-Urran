@@ -84,7 +84,7 @@ function LoginForm() {
        name="description"
        content="Join us for Latest update Free/पैड PDFs of current Affairs"
       />
-      <link rel="canonical" href="https://unchiudan.in/login"></link>
+      <link rel="canonical" href="https://unchiudaanclasses.com/login"></link>
     </Helmet>
       <div className="flex justify-end">
         <Link
