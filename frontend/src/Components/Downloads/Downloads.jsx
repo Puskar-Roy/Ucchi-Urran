@@ -46,7 +46,7 @@ function BlogComps({
             },
           }
         );
-
+          
         if (response.status === 200) {
           toast.dismiss(loadingToast);
           toast.success("Item deleted successfully");

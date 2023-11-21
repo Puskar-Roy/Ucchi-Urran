@@ -12,6 +12,7 @@ export function BlogComps({
   category,
   title,
   userData,
+  onDeleteSuccess,
 }) {
   
   let role;
@@ -46,6 +47,7 @@ export function BlogComps({
           toast.dismiss(loadingToast);
           toast.success("Item deleted successfully");
           // Reload the page after successful deletion
+          onDeleteSuccess();
         } else {
           toast.dismiss(loadingToast);
           console.error("Error deleting item:", response);

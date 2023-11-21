@@ -5,7 +5,7 @@ import { MdOutlineDelete } from "react-icons/md";
 import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
 
-function NewsComp({ newsItems, userData }) {
+function NewsComp({ newsItems, userData,onNewsDelete  }) {
   let role;
 
   if (userData) {
@@ -51,6 +51,9 @@ function NewsComp({ newsItems, userData }) {
           // Perform any additional actions you need here
           console.log("News item deleted successfully");
           toast.success("News item deleted successfully");
+          if (typeof onNewsDelete === 'function') {
+            onNewsDelete();
+          }
         } else {
           toast.dismiss(loadingToast);
           console.error("Error deleting news item:", response);
