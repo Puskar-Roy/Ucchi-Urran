@@ -68,6 +68,9 @@ function Currentaffairs({ userData }) {
     setPostsPerPage(value);
     setCurrentPage(1); // Reset page number to 1 when limit changes
   };
+  const handleDeleteSuccess = () => {
+    fetchData(currentPage, selectedCategory); // Fetch data again after successful deletion
+  };
 
   return (
     <div className="mx-auto py-[7rem]">
@@ -121,6 +124,7 @@ function Currentaffairs({ userData }) {
                 category={blog.category}
                 id={blog._id}
                 userData={userData}
+                onDeleteSuccess={handleDeleteSuccess}
               />
             );
           })}
