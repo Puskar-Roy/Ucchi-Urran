@@ -5,10 +5,10 @@ import JoditEditor from 'jodit-react';
 
 const postnews = async (newsData) => {
   const token = localStorage.getItem("jwt_token");
+  let loadingToast
   
-  const loadingToast = toast.loading("Posting News...");
   try {
-    
+    const loadingToast = toast.loading("Posting News...");
     await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/news`,
       newsData,

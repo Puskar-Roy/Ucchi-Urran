@@ -13,9 +13,9 @@ const postaffairs = async (affairsData) => {
   formData.append("description", affairsData.description);
   formData.append("data", JSON.stringify(affairsData.data));
   formData.append("photo", affairsData.photo);
-  const loadingToast = toast.loading("Posting CurrentAffairs...");
+  let loadingToast
   try {
-   
+    loadingToast = toast.loading("Posting CurrentAffairs...");
     await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/currentaffairs`,
       formData,

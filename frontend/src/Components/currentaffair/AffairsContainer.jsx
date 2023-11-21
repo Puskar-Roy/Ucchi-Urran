@@ -31,9 +31,9 @@ export function BlogComps({
     event.stopPropagation(); // Prevent the click event from propagating to the parent link element
     if (window.confirm("Are you sure you want to delete this item?")) {
       const token = localStorage.getItem("jwt_token");
-      const loadingToast = toast.loading("Deleting CurrentAffairs...");
+      let loadingToast
       try {
-        
+        loadingToast = toast.loading("Deleting CurrentAffairs...");
         const response = await axios.delete(
           `${import.meta.env.VITE_BACKEND_URL}/currentaffairs/${id}`,
           {

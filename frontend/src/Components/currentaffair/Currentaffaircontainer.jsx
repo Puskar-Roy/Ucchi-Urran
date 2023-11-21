@@ -103,7 +103,12 @@ function Currentaffairs({ userData }) {
             filter ? "hidden" : "block"
           }`}
         >
-          {affairs.map((blog) => {
+        {affairs.length === 0 ? (
+          <div className="items-center justify-center ">
+            <p className="text-center  text-gray-500">No CurrentAffairs available.</p>
+            </div>
+          ) : (
+          affairs.map((blog) => {
             const createdAt = new Date(blog.createdAt);
             const updatedAt = new Date(blog.updatedAt);
             const formattedDate = createdAt.toLocaleString("default", {
@@ -127,7 +132,8 @@ function Currentaffairs({ userData }) {
                 onDeleteSuccess={handleDeleteSuccess}
               />
             );
-          })}
+  }) 
+)}
         </div>
 
         <div

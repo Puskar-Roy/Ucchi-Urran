@@ -8,9 +8,9 @@ import he from 'he';
 const postnews = async (newsData, id) => {
   const token = localStorage.getItem("jwt_token");
  
-  const loadingToast = toast.loading("Updating News...");
+  let loadingToast
   try {
-    
+    loadingToast = toast.loading("Updating News...");
     await axios.patch(
       `${import.meta.env.VITE_BACKEND_URL}/news/${id}`,
       newsData,

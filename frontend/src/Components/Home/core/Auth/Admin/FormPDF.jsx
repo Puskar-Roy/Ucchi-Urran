@@ -14,9 +14,9 @@ const postpdf = async (pdfData) => {
   formData.append("pdf", pdfData.pdf);
   formData.append("status", pdfData.status);
   formData.append("price", pdfData.price);
-  const loadingToast = toast.loading("Posting PDF...");
+ let loadingToast;
   try {
-    
+     loadingToast = toast.loading("Posting PDF...");
     await axios.post(
       `${import.meta.env.VITE_BACKEND_URL}/pdfs`,
       formData,
