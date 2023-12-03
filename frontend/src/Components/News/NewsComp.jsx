@@ -93,8 +93,8 @@ function NewsComp({ newsItems, userData,onNewsDelete  }) {
       const decodedArticle = decodeHtmlEntities(news.article);
 
       return (
-        <Link to={`/News/${news._id}`} key={news._id}>
-          <div className="relative flex flex-col md:flex-row md:space-x-5 my-6 md:space-y-0 rounded-xl shadow-lg  max-w-xs md:max-w-3xl mx-auto border border-white bg-white h-[50%]">
+        <Link to={`/News/${news._id}`} key={news._id} className="h-[7%]">
+          <div className="relative flex flex-col md:flex-row md:space-x-5 my-6 md:space-y-0 rounded-xl shadow-lg  max-w-xs md:max-w-3xl mx-auto border border-white bg-white h-[70%]">
             {role ? (
               <button
                 className="absolute top-0 right-0 text-red-600 cursor-pointer bg-red-500 rounded-full p-2"
