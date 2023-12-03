@@ -5,7 +5,7 @@ import { MdOutlineDelete } from "react-icons/md";
 import axios from "axios";
 import { Toaster, toast } from "react-hot-toast";
 
-function NewsComp({ newsItems, userData,onNewsDelete  }) {
+function NewsComp({ newsItems, userData, onNewsDelete }) {
   let role;
 
   if (userData) {
@@ -33,9 +33,8 @@ function NewsComp({ newsItems, userData,onNewsDelete  }) {
 
     if (window.confirm("Are you sure you want to delete this item?")) {
       const token = localStorage.getItem("jwt_token");
-      let loadingToast
+      let loadingToast;
       try {
-        
         loadingToast = toast.loading("Deleting News..."); // Display loading toast
         const response = await axios.delete(
           `${import.meta.env.VITE_BACKEND_URL}/news/${newsId}`,
@@ -51,7 +50,7 @@ function NewsComp({ newsItems, userData,onNewsDelete  }) {
           // Perform any additional actions you need here
           console.log("News item deleted successfully");
           toast.success("News item deleted successfully");
-          if (typeof onNewsDelete === 'function') {
+          if (typeof onNewsDelete === "function") {
             onNewsDelete();
           }
         } else {
@@ -68,29 +67,29 @@ function NewsComp({ newsItems, userData,onNewsDelete  }) {
   };
 
   const decodeHtmlEntities = (html) => {
-    const textarea = document.createElement('textarea');
+    const textarea = document.createElement("textarea");
     textarea.innerHTML = html;
     return textarea.value;
   };
 
   return (
     <div className="flex flex-col md:w-[429%]">
-  {newsItems.length === 0 ? (
-    <div className="items-center justify-center">
-      <p className="text-center text-gray-500">No news items available.</p>
-    </div>
-  ) : (
-    newsItems.map((news) => {
-      const createdAt = new Date(news.createdAt);
-      const formattedDate = createdAt.toLocaleString("default", {
-        day: "numeric",
-        month: "long",
-      });
+      {newsItems.length === 0 ? (
+        <div className="items-center justify-center">
+          <p className="text-center text-gray-500">No news items available.</p>
+        </div>
+      ) : (
+        newsItems.map((news) => {
+          const createdAt = new Date(news.createdAt);
+          const formattedDate = createdAt.toLocaleString("default", {
+            day: "numeric",
+            month: "long",
+          });
 
-      const isRecent = isWithin48Hours(news.createdAt);
+          const isRecent = isWithin48Hours(news.createdAt);
 
-      const decodedHeading = decodeHtmlEntities(news.heading);
-      const decodedArticle = decodeHtmlEntities(news.article);
+          const decodedHeading = decodeHtmlEntities(news.heading);
+          const decodedArticle = decodeHtmlEntities(news.article);
 
       return (
         <Link to={`/News/${news._id}`} key={news._id} className="h-[7%]">
